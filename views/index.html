@@ -19,7 +19,20 @@
 </head>
 
 <body>
-    <h1 align="center">418宿舍5.13-5.20学习目标</h1>
+
+    <div class="panel-heading">
+        
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+
+    <h1 align="center">5.13-5.20学习计划</h1>
+
+ </a>
+        
+    </div>
+
+    <div id="collapseThree" class="panel-collapse collapse in">
+        <div class="panel-body">
+
     {{ each items }}
     <table class="table">
 
@@ -34,20 +47,32 @@
         </thead>
         <tbody>
             <tr>
-                <td>1、{{   $value.zz1   }}<br>2、{{   $value.zz2   }}<br>3、{{   $value.zz3   }}</td>
-                <td>1、{{   $value.yy1   }}<br>2、{{   $value.yy2   }}<br>3、{{   $value.yy3   }}</td>
-                <td>1、{{   $value.sx1   }}<br>2、{{   $value.sx2   }}<br>3、{{   $value.sx3   }}</td>
-                <td>1、{{   $value.zyk1  }}<br>2、{{   $value.zyk2  }}<br>3、{{   $value.zyk3  }}</td>
+                <td>1、{{   $value.zz1   }}&nbsp;<input type="checkbox" id="" value=" "><br>2、{{   $value.zz2   }}&nbsp;<input type="checkbox" id="" value=" "><br>3、{{   $value.zz3   }}&nbsp;<input type="checkbox" id="" value=" "></td>
+                <td>1、{{   $value.yy1   }}&nbsp;<input type="checkbox" id="" value=" "><br>2、{{   $value.yy2   }}&nbsp;<input type="checkbox" id="" value=" "><br>3、{{   $value.yy3   }}&nbsp;<input type="checkbox" id="" value=" "></td>
+                <td>1、{{   $value.sx1   }}&nbsp;<input type="checkbox" id="" value=" "><br>2、{{   $value.sx2   }}&nbsp;<input type="checkbox" id="" value=" "><br>3、{{   $value.sx3   }}&nbsp;<input type="checkbox" id="" value=" "></td>
+                <td>1、{{   $value.zyk1  }}&nbsp;<input type="checkbox" id="" value=" "><br>2、{{   $value.zyk2  }}&nbsp;<input type="checkbox" id="" value=" "><br>3、{{   $value.zyk3  }}&nbsp;<input type="checkbox" id="" value=" "></td>
             </tr>
 
         </tbody>
     </table>
+	        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+              60%
+            </div>
+          </div>
     {{ /each }}
-    <div style="text-align:center;">
-            <a class="btn btn-default" href="/new" role="button" style="width:auto;"><strong>点这里写你的下周计划</strong></a>
-	<a class="btn btn-default" href="https://github.com/guhang987/418pages" target="view_window" role="button" style="width:auto;">查看网页源代码</a>
+
+
+   </div>
     </div>
-	<a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备19007421号</a>
+
+
+
+    <div style="text-align:center;">
+            <a class="btn btn-primary" href="/new" role="button" style="width:auto;"><strong>开始写你的下周计划</strong></a>&nbsp;
+	<a class="btn btn-info" href="https://github.com/guhang987/418pages" target="view_window" role="button" style="width:auto;">查看网页源代码</a>
+    </div>
+<div><br>	<a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备19007421号</a><br></div>
 </body>
 
 </html>
