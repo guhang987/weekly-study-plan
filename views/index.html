@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        a {
+	display: block;
+	text-align: center;
+}
+    </style>
+
+</head>
+
+<body>
+    <h1 align="center">418宿舍5.13-5.20学习目标</h1>
+    {{ each items }}
+    <table class="table">
+
+        <h4 align="center">{{ $value.name }}的任务表</h4>
+        <thead>
+            <tr>
+                <th>政治</th>
+                <th>英语</th>
+                <th>数学</th>
+                <th>专业课</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1、{{   $value.zz1   }}<br>2、{{   $value.zz2   }}<br>3、{{   $value.zz3   }}</td>
+                <td>1、{{   $value.yy1   }}<br>2、{{   $value.yy2   }}<br>3、{{   $value.yy3   }}</td>
+                <td>1、{{   $value.sx1   }}<br>2、{{   $value.sx2   }}<br>3、{{   $value.sx3   }}</td>
+                <td>1、{{   $value.zyk1  }}<br>2、{{   $value.zyk2  }}<br>3、{{   $value.zyk3  }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+    {{ /each }}
+    <div style="text-align:center;">
+            <a class="btn btn-default" href="/new" role="button" style="width:auto;"><strong>点这里写你的下周计划</strong></a>
+    </div>
+</body>
+
+</html>
