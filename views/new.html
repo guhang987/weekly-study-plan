@@ -14,66 +14,131 @@
 </head>
 
 <body>
-    <h1 align="center">418宿舍5.13-5.20学习目标</h1>   
+    <h1 align="center">5.13-5.20学习目标</h1>
     <form action="/new" method="POST">
-        
-   
-        <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
-                <div class="col-sm-10">
-                    <input required="required" type="text" class="form-control" name="name" placeholder="请填写姓名">
-                   
-                </div>
-    
-            </div>
-
-
+ 
 
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">政治学习内容</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
             <div class="col-sm-10">
-                <input required="required" type="text" class="form-control" name="zz1" placeholder="请填写任务一">
-                <input required="required" type="text" class="form-control" name="zz2" placeholder="请填写任务二">
-                <input required="required" type="text" class="form-control" name="zz3" placeholder="请填写任务三">
+                <input required="required" type="text" class="form-control" name="name" placeholder="请填写姓名">
 
             </div>
 
         </div>
+
+
+
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">英语学习内容</label>
-            <div class="col-sm-10">
-                <input required="required" type="text" class="form-control" name="yy1" placeholder="请填写任务一">
-                <input required="required" type="text" class="form-control" name="yy2" placeholder="请填写任务二">
-                <input required="required" type="text" class="form-control" name="yy3" placeholder="请填写任务三">
+            <label for="inputEmail3" class="col-sm-2 control-label">政治学习内容
+            </label>
+            <div class="col-sm-10" id=zz>
+                <!-- <input required="required" type="text" class="form-control" name="zz1" placeholder="请填写任务一">
+                <!-- <input required="required" type="text" class="form-control" name="zz2" placeholder="请填写任务二"> -->
+                <input required="required" type="text" class="form-control" id='zz1' name="zz1" placeholder="请填写任务1">
+                <a class="btn btn-default" onclick="addCenterIpGrp1(this)" role="button">新增一项计划</a>
+                <a class="btn btn-default" onclick="deCenterIpGrp1(this)" role="button">移除一项计划</a>
 
             </div>
-        </div>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">数学学习内容</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">英语学习内容
+            </label>
             <div class="col-sm-10">
-                <input required="required" type="text" class="form-control" name="sx1" placeholder="请填写任务一">
-                <input required="required" type="text" class="form-control" name="sx2" placeholder="请填写任务二">
-                <input required="required" type="text" class="form-control" name="sx3" placeholder="请填写任务三">
+                <!-- <input required="required" type="text" class="form-control" name="zz1" placeholder="请填写任务一">
+                    <!-- <input required="required" type="text" class="form-control" name="zz2" placeholder="请填写任务二"> -->
+                <input required="required" type="text" class="form-control" id="yy1" name="yy1" placeholder="请填写任务1">
+                <a class="btn btn-default" onclick="addCenterIpGrp2(this)" role="button">新增一项计划</a>
+                <a class="btn btn-default" onclick="deCenterIpGrp2(this)" role="button">移除一项计划</a>
 
             </div>
-        </div>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">专业课学习内容</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">数学（专业课）学习内容
+            </label>
             <div class="col-sm-10">
-                <input required="required" type="text" class="form-control" name="zyk1" placeholder="请填写任务一">
-                <input required="required" type="text" class="form-control" name="zyk2" placeholder="请填写任务二">
-                <input required="required" type="text" class="form-control" name="zyk3" placeholder="请填写任务三">
+                <!-- <input required="required" type="text" class="form-control" name="zz1" placeholder="请填写任务一">
+                        <!-- <input required="required" type="text" class="form-control" name="zz2" placeholder="请填写任务二"> -->
+                <input required="required" type="text" class="form-control" id="sx1" name="sx1" placeholder="请填写任务1">
+                <a class="btn btn-default" onclick="addCenterIpGrp3(this)" role="button">新增一项计划</a>
+                <a class="btn btn-default" onclick="deCenterIpGrp3(this)" role="button">移除一项计划</a>
+
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+            <label for="inputEmail3" class="col-sm-2 control-label">专业课学习内容
+            </label>
+            <div class="col-sm-10">
+                <!-- <input required="required" type="text" class="form-control" name="zz1" placeholder="请填写任务一">
+                            <!-- <input required="required" type="text" class="form-control" name="zz2" placeholder="请填写任务二"> -->
+                <input required="required" type="text" class="form-control" id="zyk1" name="zyk1" placeholder="请填写任务1">
+                <a class="btn btn-default" onclick="addCenterIpGrp4(this)" role="button">新增一项计划</a>
+                <a class="btn btn-default" onclick="deCenterIpGrp4(this)" role="button">移除一项计划</a>
+
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
                     <div style="text-align:center;">
-                <button type="submit" class="btn btn-success">提交</button>
+                        <!-- <button type="submit" class="btn btn-success">提交</button> -->
+                        <!-- 请恢复button -->
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
     </form>
 
 </body>
+<script>
+
+    var rowCount1 = 1;//(资源)行数默认1行 
+    //添加资源输入框项 
+    function addCenterIpGrp1(obj) {
+        rowCount1++
+        html = "<input required='required' type='text' class='form-control' id='zz" + rowCount1 + "' name='zz" + rowCount1 + "' placeholder='请填写任务" + rowCount1 + "'> "
+        obj.insertAdjacentHTML('beforebegin', html)
+    }
+    function deCenterIpGrp1(obj) {
+
+        var child = document.getElementById('zz' + rowCount1)
+        child.parentNode.removeChild(child);
+        rowCount1--
+
+    }
+    var rowCount2 = 1;//(资源)行数默认1行 
+    //添加资源输入框项 
+    function addCenterIpGrp2(obj) {
+        rowCount2++
+        html = "<input required='required' type='text' class='form-control' id='yy" + rowCount2 + "' name='yy" + rowCount2 + "' placeholder='请填写任务" + rowCount2 + "'> "
+        obj.insertAdjacentHTML('beforebegin', html)
+    }
+    function deCenterIpGrp2(obj) {
+
+        var child = document.getElementById('yy' + rowCount2)
+        child.parentNode.removeChild(child);
+        rowCount2--
+
+    }
+    var rowCount3 = 1;//(资源)行数默认1行 
+    //添加资源输入框项 
+    function addCenterIpGrp3(obj) {
+        rowCount3++
+        html = "<input required='required' type='text' class='form-control' id='sx" + rowCount3 + "' name='sx" + rowCount3 + "' placeholder='请填写任务" + rowCount3 + "'> "
+        obj.insertAdjacentHTML('beforebegin', html)
+    }
+    function deCenterIpGrp3(obj) {
+
+        var child = document.getElementById('sx' + rowCount3)
+        child.parentNode.removeChild(child);
+        rowCount3--
+
+    }
+    var rowCount4 = 1;//(资源)行数默认1行 
+    //添加资源输入框项 
+    function addCenterIpGrp4(obj) {
+        rowCount4++
+        html = "<input required='required' type='text' class='form-control' id ='zyk" + rowCount4 + "' name='zyk" + rowCount4 + "' placeholder='请填写任务" + rowCount4 + "'> "
+        obj.insertAdjacentHTML('beforebegin', html)
+    }
+    function deCenterIpGrp4(obj) {
+
+        var child = document.getElementById('zyk' + rowCount4)
+        child.parentNode.removeChild(child);
+        rowCount4--
+
+    }
+</script>
 
 </html>
