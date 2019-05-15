@@ -26,55 +26,63 @@ var Schema = mongoose.Schema;
 var studentSchema = new Schema({
     name:{
         type: String,
-        required: true
+        required:true
     },
     zz1:{
         type: String,
-        required: true
+        
     },
     zz2:{
         type: String,
-        required: true
+        
     },
     zz3:{
         type: String,
-        required: true
+        
     },
+
     yy1:{
         type: String,
-        required: true
+        
     },
     yy2:{
         type: String,
-        required: true
+        
     },
     yy3:{
         type: String,
-        required: true
+        
     },
+
     sx1:{
         type: String,
-        required: true
+        
     },
     sx2:{
         type: String,
-        required: true
+        
     },
     sx3:{
         type: String,
-        required: true
+        
     },
+
     zyk1:{
         type: String,
-        required: true
+        
     },
     zyk2:{
         type: String,
-        required: true
+        
     },
     zyk3:{
         type: String,
-        required: true
+        
+    },
+
+    html:{
+        type: String,
+        required:true
     }
     
 });
@@ -106,9 +114,9 @@ app.get('/',function(req,res){
             return console.log(err)
         }else
         {
-            
             res.render('index.html',{
-                items:ret
+                items:ret,
+                
             }
            
             
@@ -124,22 +132,39 @@ app.get('/new',function(req,res){
     res.render('new.html')
 })
 app.post('/new',function(req,res){
-    console.log(req.body)
-
+    //console.log(req.body)
+    var html=""
+    if(req.body.zz3){
+        html += " <td>1、"+req.body.zz1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.zz2+"&nbsp;<input type=\"checkbox\" ><br>3、"+req.body.zz3+"&nbsp;<input type=\"checkbox\" ></td>"
+    }else if(req.body.zz2){
+        html +=" <td>1、"+req.body.zz1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.zz2+"&nbsp;<input type=\"checkbox\" ></td>"
+    }else if(req.body.zz1){
+        html +=" <td>1、"+req.body.zz1+"&nbsp;<input type=\"checkbox\" ></td>"
+    }
+    if(req.body.yy3){
+        html += " <td>1、"+req.body.yy1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.yy2+"&nbsp;<input type=\"checkbox\" ><br>3、"+req.body.yy3+"&nbsp;<input type=\"checkbox\" ></td>"
+    }else if(req.body.yy2){
+        html +=" <td>1、"+req.body.yy1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.yy2+"&nbsp;<input type=\"checkbox\" ></td>"
+    }else if(req.body.yy1){
+        html +=" <td>1、"+req.body.yy1+"&nbsp;<input type=\"checkbox\" ></td>"
+    }
+    if(req.body.sx3){
+        html += " <td>1、"+req.body.sx1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.sx2+"&nbsp;<input type=\"checkbox\" ><br>3、"+req.body.sx3+"&nbsp;<input type=\"checkbox\" ></td>"
+    }else if(req.body.sx2){
+        html +=" <td>1、"+req.body.sx1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.sx2+"&nbsp;<input type=\"checkbox\" ></td>"
+    }else if(req.body.sx1){
+        html +=" <td>1、"+req.body.sx1+"&nbsp;<input type=\"checkbox\" ></td>"
+    }
+    if(req.body.zyk3){
+        html += " <td>1、"+req.body.zyk1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.zyk2+"&nbsp;<input type=\"checkbox\" ><br>3、"+req.body.zyk3+"&nbsp;<input type=\"checkbox\" ></td>"
+    }else if(req.body.zyk2){
+        html +=" <td>1、"+req.body.zyk1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.zyk2+"&nbsp;<input type=\"checkbox\" ></td>"
+    }else if(req.body.zyk1){
+        html +=" <td>1、"+req.body.zyk1+"&nbsp;<input type=\"checkbox\" ></td>"
+    }
     var admin = new Student({
         name:req.body.name,
-        zz1:req.body.zz1,
-        zz2:req.body.zz2,
-        zz3:req.body.zz3,
-        yy1:req.body.yy1,
-        yy2:req.body.yy2,
-        yy3:req.body.yy3,
-        sx1:req.body.sx1,
-        sx2:req.body.sx2,
-        sx3:req.body.sx3,
-        zyk1:req.body.zyk1,
-        zyk2:req.body.zyk2,
-        zyk3:req.body.zyk3,
+        html:html//html是要渲染的html表格字段 
     })
     admin.save(function(err,ret){
         if(err){

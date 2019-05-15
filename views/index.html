@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
+     <style>
         a {
-	display: block;
-	text-align: center;
-}
+            display: block;
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -21,58 +21,58 @@
 <body>
 
     <div class="panel-heading">
-        
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 
-    <h1 align="center">5.13-5.20学习计划</h1>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 
- </a>
-        
+            <h1 align="center">5.13-5.20学习计划</h1>
+
+        </a>
+
     </div>
 
     <div id="collapseThree" class="panel-collapse collapse in">
         <div class="panel-body">
 
-    {{ each items }}
-    <table class="table">
+            {{ each items }}
+            <table class="table">
 
-        <h4 align="center">{{ $value.name }}的任务表</h4>
-        <thead>
-            <tr>
-                <th>政治</th>
-                <th>英语</th>
-                <th>数学</th>
-                <th>专业课</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1、{{   $value.zz1   }}&nbsp;<input type="checkbox" id="" value=" "><br>2、{{   $value.zz2   }}&nbsp;<input type="checkbox" id="" value=" "><br>3、{{   $value.zz3   }}&nbsp;<input type="checkbox" id="" value=" "></td>
-                <td>1、{{   $value.yy1   }}&nbsp;<input type="checkbox" id="" value=" "><br>2、{{   $value.yy2   }}&nbsp;<input type="checkbox" id="" value=" "><br>3、{{   $value.yy3   }}&nbsp;<input type="checkbox" id="" value=" "></td>
-                <td>1、{{   $value.sx1   }}&nbsp;<input type="checkbox" id="" value=" "><br>2、{{   $value.sx2   }}&nbsp;<input type="checkbox" id="" value=" "><br>3、{{   $value.sx3   }}&nbsp;<input type="checkbox" id="" value=" "></td>
-                <td>1、{{   $value.zyk1  }}&nbsp;<input type="checkbox" id="" value=" "><br>2、{{   $value.zyk2  }}&nbsp;<input type="checkbox" id="" value=" "><br>3、{{   $value.zyk3  }}&nbsp;<input type="checkbox" id="" value=" "></td>
-            </tr>
+                <h4 align="center">{{ $value.name }}的任务表</h4>
+                <thead>
+                    <tr>
+                        <th>政治</th>
+                        <th>英语</th>
+                        <th>数学</th>
+                        <th>专业课</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="html">
+                        <div>{{#$value.html}}</div>
+                    </tr>
 
-        </tbody>
-    </table>
-	        <div class="progress">
-            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-              60%
+                </tbody>
+            </table>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                    60%
+                </div>
             </div>
-          </div>
-    {{ /each }}
+
+            {{ /each }}
 
 
-   </div>
+        </div>
     </div>
 
 
 
     <div style="text-align:center;">
-            <a class="btn btn-primary" href="/new" role="button" style="width:auto;"><strong>开始写你的下周计划</strong></a>&nbsp;
-	<a class="btn btn-info" href="https://github.com/guhang987/418pages" target="view_window" role="button" style="width:auto;">查看网页源代码</a>
+        <a class="btn btn-primary" href="/new" role="button" style="width:auto;"><strong>开始写你的本周计划</strong></a>&nbsp;
+        <a class="btn btn-info" href="https://github.com/guhang987/418pages" target="view_window" role="button"
+            style="width:auto;">关于本站</a>
     </div>
-<div><br>	<a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备19007421号</a><br></div>
+    <div><br> <a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备19007421号</a><br></div>
 </body>
 
 </html>

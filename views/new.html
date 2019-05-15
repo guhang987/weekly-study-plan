@@ -73,7 +73,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <div style="text-align:center;">
-                        <!-- <button type="submit" class="btn btn-success">提交</button> -->
+                        <button type="submit" class="btn btn-success">提交</button> 
                         <!-- 请恢复button -->
                     </div>
                 </div>
@@ -86,10 +86,11 @@
     var rowCount1 = 1;//(资源)行数默认1行 
     //添加资源输入框项 
     function addCenterIpGrp1(obj) {
+	if(rowCount1<=2){
         rowCount1++
         html = "<input required='required' type='text' class='form-control' id='zz" + rowCount1 + "' name='zz" + rowCount1 + "' placeholder='请填写任务" + rowCount1 + "'> "
         obj.insertAdjacentHTML('beforebegin', html)
-    }
+    }}
     function deCenterIpGrp1(obj) {
 
         var child = document.getElementById('zz' + rowCount1)
@@ -100,10 +101,11 @@
     var rowCount2 = 1;//(资源)行数默认1行 
     //添加资源输入框项 
     function addCenterIpGrp2(obj) {
-        rowCount2++
+	if(rowCount2<=2){       
+ rowCount2++
         html = "<input required='required' type='text' class='form-control' id='yy" + rowCount2 + "' name='yy" + rowCount2 + "' placeholder='请填写任务" + rowCount2 + "'> "
         obj.insertAdjacentHTML('beforebegin', html)
-    }
+    }}
     function deCenterIpGrp2(obj) {
 
         var child = document.getElementById('yy' + rowCount2)
@@ -114,10 +116,11 @@
     var rowCount3 = 1;//(资源)行数默认1行 
     //添加资源输入框项 
     function addCenterIpGrp3(obj) {
-        rowCount3++
+if(rowCount3<=2){      
+  rowCount3++
         html = "<input required='required' type='text' class='form-control' id='sx" + rowCount3 + "' name='sx" + rowCount3 + "' placeholder='请填写任务" + rowCount3 + "'> "
         obj.insertAdjacentHTML('beforebegin', html)
-    }
+    }}
     function deCenterIpGrp3(obj) {
 
         var child = document.getElementById('sx' + rowCount3)
@@ -128,10 +131,11 @@
     var rowCount4 = 1;//(资源)行数默认1行 
     //添加资源输入框项 
     function addCenterIpGrp4(obj) {
-        rowCount4++
+if(rowCount4<=2){      
+  rowCount4++
         html = "<input required='required' type='text' class='form-control' id ='zyk" + rowCount4 + "' name='zyk" + rowCount4 + "' placeholder='请填写任务" + rowCount4 + "'> "
         obj.insertAdjacentHTML('beforebegin', html)
-    }
+    }}
     function deCenterIpGrp4(obj) {
 
         var child = document.getElementById('zyk' + rowCount4)
