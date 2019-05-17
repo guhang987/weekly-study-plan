@@ -23,11 +23,14 @@
 ### 技术难点
 - 如何实现点击按钮增加输入框：obj.insertAdjacentHTML()
 - 首页如何展示数据：后台从数据库拿数据，渲染到网页上，发给用户
-- 如何获取勾选框数目：```js
+- 如何获取勾选框数目：
+
+```js
 var parent = checkbox.parentNode.parentNode.parentNode.parentNode.parentNode
         var now = $("input[type='checkbox']:checked", parent).length
         var all = $("input[type='checkbox']", parent).length
 ```
+
 - 如何实现进度条同步更新：`$(parent).find("#pro").attr("style", "width:" + 100 * now / all + "%;")`  
 - 如何实现折叠：bootstrap `<div class="panel-heading"><div class="panel-body">`
 
