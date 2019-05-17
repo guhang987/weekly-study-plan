@@ -34,6 +34,7 @@
         <div class="panel-body">
 
             {{ each items }}
+<div>
             <table class="table">
 
                 <h4 align="center">{{ $value.name }}的任务表</h4>
@@ -54,11 +55,11 @@
             </table>
             <div class="progress">
                 <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
-                    aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    60%
+                    aria-valuemin="0" aria-valuemax="100" id="pro"">
+                    
                 </div>
             </div>
-
+</div>
             {{ /each }}
 
 
@@ -74,5 +75,25 @@
     </div>
     <div><br> <a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备19007421号</a><br></div>
 </body>
-
+<script>
+    function checkboxOnclick(checkbox){
+ 	 var parent = checkbox.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
+        var now = $("input[type='checkbox']:checked", parent).length
+        var all = $("input[type='checkbox']", parent).length
+ 	console.log(parent) 
+        if ( checkbox.checked == true){
+ $(parent).find("#pro").attr("style", "width:" + 100 * now / all + "%;")  	        
+        //Action for checked
+        checkbox.parentNode.style.textDecoration="line-through"
+        
+        }else{
+         $(parent).find("#pro").attr("style", "width:" + 100 * now / all + "%;")  
+        //Action for not checked
+        checkbox.parentNode.style.textDecoration="none"
+      
+        }
+        
+        }
+ 
+    </script>
 </html>

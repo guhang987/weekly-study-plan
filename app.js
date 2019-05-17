@@ -135,32 +135,32 @@ app.post('/new',function(req,res){
     //console.log(req.body)
     var html=""
     if(req.body.zz3){
-        html += " <td>1、"+req.body.zz1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.zz2+"&nbsp;<input type=\"checkbox\" ><br>3、"+req.body.zz3+"&nbsp;<input type=\"checkbox\" ></td>"
+        html += " <td><p>1、"+req.body.zz1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zz2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.zz3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.zz2){
-        html +=" <td>1、"+req.body.zz1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.zz2+"&nbsp;<input type=\"checkbox\" ></td>"
+        html +=" <td><p>1、"+req.body.zz1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zz2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.zz1){
-        html +=" <td>1、"+req.body.zz1+"&nbsp;<input type=\"checkbox\" ></td>"
+        html +=" <td>1、"+req.body.zz1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></td>"
     }
     if(req.body.yy3){
-        html += " <td>1、"+req.body.yy1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.yy2+"&nbsp;<input type=\"checkbox\" ><br>3、"+req.body.yy3+"&nbsp;<input type=\"checkbox\" ></td>"
+        html += " <td><p>1、"+req.body.yy1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.yy2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.yy3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.yy2){
-        html +=" <td>1、"+req.body.yy1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.yy2+"&nbsp;<input type=\"checkbox\" ></td>"
+        html +=" <td><p>1、"+req.body.yy1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.yy2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.yy1){
-        html +=" <td>1、"+req.body.yy1+"&nbsp;<input type=\"checkbox\" ></td>"
+        html +=" <td>1、"+req.body.yy1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></td>"
     }
     if(req.body.sx3){
-        html += " <td>1、"+req.body.sx1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.sx2+"&nbsp;<input type=\"checkbox\" ><br>3、"+req.body.sx3+"&nbsp;<input type=\"checkbox\" ></td>"
+        html += " <td><p>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.sx2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.sx3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.sx2){
-        html +=" <td>1、"+req.body.sx1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.sx2+"&nbsp;<input type=\"checkbox\" ></td>"
+        html +=" <td><p>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.sx2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.sx1){
-        html +=" <td>1、"+req.body.sx1+"&nbsp;<input type=\"checkbox\" ></td>"
+        html +=" <td>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></td>"
     }
     if(req.body.zyk3){
-        html += " <td>1、"+req.body.zyk1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.zyk2+"&nbsp;<input type=\"checkbox\" ><br>3、"+req.body.zyk3+"&nbsp;<input type=\"checkbox\" ></td>"
+        html += " <td><p>1、"+req.body.zyk1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zyk2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.zyk3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.zyk2){
-        html +=" <td>1、"+req.body.zyk1+"&nbsp;<input type=\"checkbox\" ><br>2、"+req.body.zyk2+"&nbsp;<input type=\"checkbox\" ></td>"
+        html +=" <td><p>1、"+req.body.zyk1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zyk2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.zyk1){
-        html +=" <td>1、"+req.body.zyk1+"&nbsp;<input type=\"checkbox\" ></td>"
+        html +=" <td>1、"+req.body.zyk1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></td>"
     }
     var admin = new Student({
         name:req.body.name,
