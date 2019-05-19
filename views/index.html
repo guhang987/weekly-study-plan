@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>这周学什么？</title>
+    <title>这周学什么？——拯救你的执行力</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -24,12 +24,14 @@
 <div class="jumbotron">
 <div class="container">
   <h1><strong>预则立，不预则废</strong></h1>
-  <p>这是一个专为考研人设计的网页。以周为单位，你可以在这里看看大家的学习计划完成情况，也可以写下你的计划，但完成后要记得来这里打钩，<strong>并且轻触你的名字来保存进度</strong>。快来享受任务完成的快感吧！(每周日晚6点更新，届时本周进度将无法提交)</p>
+  <p>这是一个专为考研人设计的网页。以周为单位，你可以在这里看看大家的学习计划完成情况，也可以写下你的计划，但完成后要记得来这里打钩，<strong>并且轻触你的名字来保存进度</strong>。快来享受任务完成的快感吧！</p>
   <p><a class="btn btn-primary btn-lg" href="/new" role="button">现在就写计划！</a>&nbsp; <a class="btn btn-info btn-lg" href="/about" role="button">关于本站</a>  </p>
+	<p id="clock"></p>
+	<p id="clock2"></p>
 </div></div>
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 
-            <h1 align="center">5.20-5.26学习计划</h1>
+            <h1 align="center">5.20-5.26周计划</h1>
 
         </a>
 
@@ -74,7 +76,7 @@
     <div>
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 
-            <h3 align="center">5.13-5.19学习计划(点击展开)</h3>
+            <h3 align="center">5.13-5.19周计划 [MVP:<strong>刘天阳</strong>]<br> <small>（点击查看详情）</small> </h3>
 
         </a>
 
@@ -118,11 +120,11 @@
                                     <p style="text-decoration: none;">3、完成18讲剩余的题&nbsp; </p>
                                 </td>
                                 <td>
-                                    <p style="text-decoration: line-through;">1、组成原理ppt学完第500页&nbsp;  
+                                    <p style="text-decoration: none;">1、组成原理ppt学完第500页&nbsp;  
                                                </p>
                                     <p style="text-decoration: line-through;">2、组原王道完成2-4章&nbsp;  
                                                </p>
-                                    <p style="text-decoration: none;">3、组原王道全部改错，并复习笔记&nbsp; </p>
+                                    <p style="text-decoration: line-through;;">3、组原王道全部改错，并复习笔记&nbsp; </p>
                                 </td>
 
 
@@ -200,7 +202,7 @@
                         <tr id="html">
                             <div>
                                 <td>
-                                    <p>1、每天读半个小时政治&nbsp; </p>
+                                    <p  style="text-decoration: line-through;">1、每天读半个小时政治&nbsp; </p>
                                 </td>
                                 <td>
                                     <p style="text-decoration: line-through;">1、复习15-26list，开始基础词汇部分1-3单元&nbsp;  
@@ -209,9 +211,9 @@
                                                </p>
                                 </td>
                                 <td>
-                                    <p>1、预习现代的前三个单元，独立完成汤家凤教材上的例题&nbsp; </p>
-                                    <p>2、完成1800题常微分方程部分&nbsp; </p>
-                                    <p>3、根据进度完成讲义上的复习部分和例题&nbsp; </p>
+                                    <p  style="text-decoration: none;">1、预习现代的前三个单元，独立完成汤家凤教材上的例题&nbsp; </p>
+                                    <p  style="text-decoration: line-through;">2、完成1800题常微分方程部分&nbsp; </p>
+                                    <p  style="text-decoration: line-through;">3、根据进度完成讲义上的复习部分和例题&nbsp; </p>
                                 </td>
                                 <td> </td>
                             </div>
@@ -221,7 +223,7 @@
                 </table>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
-                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:33.333333333333336%;">33%</div>
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:83.333333333333336%;">83%</div>
                 </div>
             </div>
 
@@ -251,7 +253,7 @@
                                 <td>
                                     <p style="text-decoration: line-through;">1、恋练有词7-12&nbsp;  
                                                </p>
-                                    <p>2、两篇文章&nbsp; </p>
+                                    <p  style="text-decoration: line-through;">2、两篇文章&nbsp; </p>
                                     <p style="text-decoration: line-through;">3、21:00-22:00长难句视频&nbsp;  
                                                </p>
                                 </td>
@@ -275,7 +277,7 @@
                 </table>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
-                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:70%;">70%</div>
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:80%;">80%</div>
                 </div>
             </div>
 
@@ -297,7 +299,7 @@
                         <tr id="html">
                             <div>
                                 <td>
-                                    <p>1、每天上午8点至8点半背政治讲义&nbsp;     
+                                    <p  style="text-decoration: line-through;">1、每天上午8点至8点半背政治讲义&nbsp;     
                                     </p>
                                 </td>
                                 <td>
@@ -305,13 +307,13 @@
                                     </p>
                                 </td>
                                 <td>
-                                    <p>1、完成教材不定积分例题与课后练习题&nbsp;     
+                                    <p  style="text-decoration: line-through;">1、完成教材不定积分例题与课后练习题&nbsp;     
                                     </p>
                                     <p>2、学习完第六章定积分的应用&nbsp;     </p>
                                 </td>
                                 <td>
-                                    <p>1、完成扭转章节的复习笔记&nbsp;     </p>
-                                    <p>2、学习弯曲内力与应力&nbsp;     </p>
+                                    <p  style="text-decoration: line-through;">1、完成扭转章节的复习笔记&nbsp;     </p>
+                                    <p  style="text-decoration: line-through;">2、学习弯曲内力与应力&nbsp;     </p>
                                 </td>
                             </div>
                         </tr>
@@ -320,7 +322,7 @@
                 </table>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
-                        aria-valuemin="0" aria-valuemax="100" id="pro" style="min-width: 2em;">0%</div>
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:66%;">66%</div>
                 </div>
             </div>
 
@@ -401,7 +403,7 @@
                                                </p>
                                 </td>
                                 <td>
-                                    <p>1、高鸿业西微6、7章课本，视频，课后题，圣才真题&nbsp; </p>
+                                    <p  style="text-decoration: line-through;">1、高鸿业西微6、7章课本，视频，课后题，圣才真题&nbsp; </p>
                                 </td>
 
                             </div>
@@ -411,7 +413,7 @@
                 </table>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
-                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:40%;">40%</div>
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:60%;">60%</div>
                 </div>
             </div>
 
@@ -422,6 +424,7 @@
         </div>
     </div>
 </div>
+<br>
                                 <a href="http://beian.miit.gov.cn/" target="_blank">这周学什么？|粤ICP备19007421号</a>
 
 
@@ -436,6 +439,46 @@
 
 
 </body>
+<script type="text/javascript">
+    window.onload = clock;
+    function clock() {
+        var today = new Date(),//当前时间
+            h = today.getHours(),
+            m = today.getMinutes(),
+            s = today.getSeconds();
+        var stopTime = new Date("May 26 2019 18:00:00"),//结束时间
+            stopH = stopTime.getHours(),
+            stopM = stopTime.getMinutes(),
+            stopS = stopTime.getSeconds();
+        var shenyu = stopTime.getTime() - today.getTime(),//倒计时毫秒数
+            shengyuD = parseInt(shenyu / (60 * 60 * 24 * 1000)),//转换为天
+            D = parseInt(shenyu) - parseInt(shengyuD * 60 * 60 * 24 * 1000),//除去天的毫秒数
+            shengyuH = parseInt(D / (60 * 60 * 1000)),//除去天的毫秒数转换成小时
+            H = D - shengyuH * 60 * 60 * 1000,//除去天、小时的毫秒数
+            shengyuM = parseInt(H / (60 * 1000)),//除去天的毫秒数转换成分钟
+            M = H - shengyuM * 60 * 1000;//除去天、小时、分的毫秒数
+        S = parseInt((shenyu - shengyuD * 60 * 60 * 24 * 1000 - shengyuH * 60 * 60 * 1000 - shengyuM * 60 * 1000) / 1000)//除去天、小时、分的毫秒数转化为秒
+        document.getElementById("clock").innerHTML = ("本周倒计时："+shengyuD + "天" + shengyuH + "小时" + shengyuM + "分" + S + "秒" + "<br>");
+        
+var stopTime2 = new Date("Dec 22 2019 09:00:00"),//结束时间
+            stopH = stopTime2.getHours(),
+            stopM = stopTime2.getMinutes(),
+            stopS = stopTime2.getSeconds();
+        var shenyu2 = stopTime2.getTime() - today.getTime(),//倒计时毫秒数
+            shengyuD2 = parseInt(shenyu2 / (60 * 60 * 24 * 1000)),//转换为天
+            D2 = parseInt(shenyu2) - parseInt(shengyuD2 * 60 * 60 * 24 * 1000),//除去天的毫秒数
+            shengyuH2 = parseInt(D2 / (60 * 60 * 1000)),//除去天的毫秒数转换成小时
+            H2 = D2 - shengyuH2 * 60 * 60 * 1000,//除去天、小时的毫秒数
+            shengyuM2 = parseInt(H2 / (60 * 1000)),//除去天的毫秒数转换成分钟
+            M2 = H2 - shengyuM2 * 60 * 1000;//除去天、小时、分的毫秒数
+        S2 = parseInt((shenyu2 - shengyuD2 * 60 * 60 * 24 * 1000 - shengyuH2 * 60 * 60 * 1000 - shengyuM2 * 60 * 1000) / 1000)//除去天、小时、分的毫秒数转化为秒
+        document.getElementById("clock2").innerHTML = ("考研倒计时："+shengyuD2 + "天" + shengyuH2 + "小时" + shengyuM2 + "分" + S2 + "秒" + "<br>");
+       
+
+setTimeout(clock, 500);
+    }
+</script>
+
 <script>
 
 	  function tbOnclick(tb){
