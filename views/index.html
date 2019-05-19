@@ -24,25 +24,25 @@
 <div class="jumbotron">
 <div class="container">
   <h1><strong>预则立，不预则废</strong></h1>
-  <p>这是一个为考研人设计的网页。以周为单位，你可以在这里看看别人的学习计划，也可以写下你的计划，但完成后要记得打钩，<strong>然后点击你的名字就可以保存了</strong>，从而享受任务完成的快感！</p>
+  <p>这是一个专为考研人设计的网页。以周为单位，你可以在这里看看大家的学习计划完成情况，也可以写下你的计划，但完成后要记得来这里打钩，<strong>并且轻触你的名字来保存进度</strong>。快来享受任务完成的快感吧！(每周日晚6点更新，届时本周进度将无法提交)</p>
   <p><a class="btn btn-primary btn-lg" href="/new" role="button">现在就写计划！</a>&nbsp; <a class="btn btn-info btn-lg" href="/about" role="button">关于本站</a>  </p>
 </div></div>
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 
-            <h1 align="center">5.13-5.20学习计划</h1>
+            <h1 align="center">5.20-5.26学习计划</h1>
 
         </a>
 
     </div>
 
-    <div id="collapseThree" class="panel-collapse collapse in">
+    <div id="collapseTwo" class="panel-collapse collapse in">
         <div class="panel-body">
 
             {{ each items }}
 <div>
-            <table class="table">
+            <table class="table  table-bordered">
 
-                <h4 align="center"> <a  href="#" onclick="tbOnclick(this)" >  {{ $value.name }}的任务表</a></h4>
+                <h4 align="center"> <a  href="javascript:;" onclick="tbOnclick(this)" >  {{ $value.name }}的学习计划</a></h4>
                 <thead>
                     <tr>
                         <th>政治</th>
@@ -59,13 +59,11 @@
                 </tbody>
             </table>
             <div class="progress">
-               <!-- <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
-                    aria-valuemin="0" aria-valuemax="100" id="pro"">
-                    
-                </div>-->
 		{{#$value.pro}}
             </div>
 </div>
+
+
             {{ /each }}
 
 
@@ -73,13 +71,370 @@
     </div>
 
 
+    <div>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 
-    <!--<div style="text-align:center;">
-        <a class="btn btn-primary" href="/new" role="button" style="width:auto;"><strong>开始写你的本周计划</strong></a>&nbsp;
-        <a class="btn btn-info" href="https://github.com/guhang987/418pages" target="view_window" role="button"
-            style="width:auto;"> 关于本站</a>
-    </div>-->
-    <div> <a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备19007421号</a><br></br></div>
+            <h3 align="center">5.13-5.19学习计划(点击展开)</h3>
+
+        </a>
+
+    </div>
+
+    <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body">
+
+
+            <div>
+                <table class="table  table-bordered">
+
+                    <h4 align="center"> <a href="javascript:;" onclick="tbOnclick(this)"> 古航的任务表</a></h4>
+                    <thead>
+                        <tr>
+                            <th>政治</th>
+                            <th>英语</th>
+                            <th>数学</th>
+                            <th>专业课</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="html">
+                            <div>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、每天7:30-8:00读政治&nbsp;  
+                                               </p>
+                                    <p>2、看一遍老师发的ppt&nbsp; </p>
+                                </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、墨墨背单词每天300个&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: line-through;">2、绿皮书一天2个list&nbsp;  
+                                               </p>
+                                </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、完成李永乐线性代数讲义，有多余时间就复习第二遍&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: line-through;">2、完成老师发的讲义上的例题、练习题&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: none;">3、完成18讲剩余的题&nbsp; </p>
+                                </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、组成原理ppt学完第500页&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: line-through;">2、组原王道完成2-4章&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: none;">3、组原王道全部改错，并复习笔记&nbsp; </p>
+                                </td>
+
+
+
+
+
+
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:70%;">70%</div>
+                </div>
+            </div>
+
+
+
+            <div>
+                <table class="table  table-bordered">
+
+                    <h4 align="center"> <a href="javascript:;" onclick="tbOnclick(this)"> 滕德达的任务表</a></h4>
+                    <thead>
+                        <tr>
+                            <th>政治</th>
+                            <th>英语</th>
+                            <th>数学</th>
+                            <th>专业课</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="html">
+                            <div>
+                                <td>
+                                    <p>1、每天读20分钟&nbsp; </p>
+                                </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、每天一小时精读两篇文章&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: line-through;">2、每天一小时滚动阅读以前精读过的文章&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: line-through;">3、每天一小时红宝书（20页）&nbsp;  
+                                               </p>
+                                </td>
+                                <td>1、民法学到220页 看讲义加做题 主要是理解&nbsp; </td>
+                                <td> </td>
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:60%;">60%</div>
+                </div>
+            </div>
+
+
+
+            <div>
+                <table class="table  table-bordered">
+
+                    <h4 align="center"> <a href="javascript:;" onclick="tbOnclick(this)"> 刘天阳的任务表</a></h4>
+                    <thead>
+                        <tr>
+                            <th>政治</th>
+                            <th>英语</th>
+                            <th>数学</th>
+                            <th>专业课</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="html">
+                            <div>
+                                <td>
+                                    <p>1、每天读半个小时政治&nbsp; </p>
+                                </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、复习15-26list，开始基础词汇部分1-3单元&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: line-through;">2、讲义内容及时复习&nbsp;  
+                                               </p>
+                                </td>
+                                <td>
+                                    <p>1、预习现代的前三个单元，独立完成汤家凤教材上的例题&nbsp; </p>
+                                    <p>2、完成1800题常微分方程部分&nbsp; </p>
+                                    <p>3、根据进度完成讲义上的复习部分和例题&nbsp; </p>
+                                </td>
+                                <td> </td>
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:33.333333333333336%;">33%</div>
+                </div>
+            </div>
+
+
+
+            <div>
+                <table class="table  table-bordered">
+
+                    <h4 align="center"> <a href="javascript:;" onclick="tbOnclick(this)"> 赵凡的任务表</a></h4>
+                    <thead>
+                        <tr>
+                            <th>政治</th>
+                            <th>英语</th>
+                            <th>数学</th>
+                            <th>专业课</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="html">
+                            <div>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、8:00-8:30政治，8:30-9:00英语单词&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: line-through;">2、肖秀荣毛中特部分过一遍&nbsp;  
+                                               </p>
+                                </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、恋练有词7-12&nbsp;  
+                                               </p>
+                                    <p>2、两篇文章&nbsp; </p>
+                                    <p style="text-decoration: line-through;">3、21:00-22:00长难句视频&nbsp;  
+                                               </p>
+                                </td>
+                                <td>
+                                    <p>1、线代一、二章&nbsp; </p>
+                                    <p style="text-decoration: line-through;">2、1800，二重积分，微分方程&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: line-through;">3、心专注讲义题目&nbsp;  
+                                               </p>
+                                </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、第三章水动力学题目&nbsp;  
+                                               </p>
+                                    <p>2、第三章视频课&nbsp; </p>
+                                </td>
+
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:70%;">70%</div>
+                </div>
+            </div>
+
+
+
+            <div>
+                <table class="table  table-bordered">
+
+                    <h4 align="center"> <a href="javascript:;" onclick="tbOnclick(this)"> 唐晟的任务表</a></h4>
+                    <thead>
+                        <tr>
+                            <th>政治</th>
+                            <th>英语</th>
+                            <th>数学</th>
+                            <th>专业课</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="html">
+                            <div>
+                                <td>
+                                    <p>1、每天上午8点至8点半背政治讲义&nbsp;     
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>1、恋练有词unit14至unit16&nbsp;     
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>1、完成教材不定积分例题与课后练习题&nbsp;     
+                                    </p>
+                                    <p>2、学习完第六章定积分的应用&nbsp;     </p>
+                                </td>
+                                <td>
+                                    <p>1、完成扭转章节的复习笔记&nbsp;     </p>
+                                    <p>2、学习弯曲内力与应力&nbsp;     </p>
+                                </td>
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="min-width: 2em;">0%</div>
+                </div>
+            </div>
+
+
+
+            <div>
+                <table class="table  table-bordered">
+
+                    <h4 align="center"> <a href="javascript:;" onclick="tbOnclick(this)"> 张昊的任务表</a></h4>
+                    <thead>
+                        <tr>
+                            <th>政治</th>
+                            <th>英语</th>
+                            <th>数学</th>
+                            <th>专业课</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="html">
+                            <div>
+                                <td>
+                                    <p style="text-decoration: none;">1、每天读30分钟政治&nbsp; </p>
+                                    <p style="text-decoration: line-through;">2、复习马哲第一章 &nbsp;  
+                                               </p>
+                                </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、每天完成墨墨背单词任务&nbsp;  
+                                               </p>
+                                    <p>2、看完基础词汇词汇5-10&nbsp; </p>
+                                </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、复习穴位&nbsp;  
+                                               </p>
+                                    <p style="text-decoration: line-through;">2、中内每天两个病(背诵方歌）&nbsp;  
+                                               </p>
+                                </td>
+                                <td> </td>
+
+
+
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:66.66666666666667%;">67%</div>
+                </div>
+            </div>
+
+
+
+            <div>
+                <table class="table  table-bordered">
+
+                    <h4 align="center"> <a href="javascript:;" onclick="tbOnclick(this)"> 兰泽峰的任务表</a></h4>
+                    <thead>
+                        <tr>
+                            <th>政治</th>
+                            <th>英语</th>
+                            <th>数学</th>
+                            <th>专业课</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="html">
+                            <div>
+                                <td> </td>
+                                <td>
+                                    <p style="text-decoration: line-through;">1、红宝书必考词10-24复习&nbsp;  
+                                               </p>
+                                    <p>2、于惠100篇研读1篇&nbsp; </p>
+                                </td>
+                                <td>
+                                    <p>1、线代课本前三章&nbsp; </p>
+                                    <p style="text-decoration: line-through;">2、高数下二重积分&nbsp;  
+                                               </p>
+                                </td>
+                                <td>
+                                    <p>1、高鸿业西微6、7章课本，视频，课后题，圣才真题&nbsp; </p>
+                                </td>
+
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100" id="pro" style="width:40%;">40%</div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+                                <a href="http://beian.miit.gov.cn/" target="_blank">这周学什么？|粤ICP备19007421号</a>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 <script>
 
@@ -89,11 +444,11 @@
         var name = $(tb.parentNode.parentNode).find("a")[0]
         var n = $(name).html().toString()
        var pro = $(tb.parentNode.parentNode).find("#pro")[0] 
-        n=n.substring(0,n.length-4)
+        n=n.substring(0,n.length-5)
         $.post("/",{name:n,pro:pro.outerHTML,data:$(str).html().toString()},function(result){
-             alert("提交成功")
+             
         });
-	alert("提交成功~")
+	alert("保存成功~")
     }	
 	
 

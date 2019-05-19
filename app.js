@@ -21,7 +21,7 @@ app.engine('html',require('express-art-template'))
 var mongoose = require('mongoose');
 
 //1.连接你的数据库
-mongoose.connect('mongodb://localhost:27017/items2_1', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/week2', {useNewUrlParser: true});
 
 //2.设计文档结构
 var Schema = mongoose.Schema;
@@ -117,7 +117,7 @@ app.post('/new',function(req,res){
     }else if(req.body.sx2){
         html +=" <td><p>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.sx2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.sx1){
-        html +=" <td>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></td>"
+        html +=" <td><p>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else{
 	html += "<td> </td>"
 }
