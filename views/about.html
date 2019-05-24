@@ -13,9 +13,7 @@
 
 <body>
     <div class="container">
-        <img src="./views/napolun.jpg" class="img-responsive" style="margin: 0 auto" alt="Responsive image">
-        <center><small class="text-muted" style="text-align: center;margin: 0 auto;">拿破仑翻越阿尔卑斯山/大卫/1805</small></center>
-        <br>
+<br>
         <div class="panel panel-success">
             <div class="panel-heading">
 
@@ -25,33 +23,45 @@
 
             </div>
             <div class="panel-body">
+		
                 <h3>主旨</h3>
-                <p>你是否有制定了漂亮的计划，却完成不了的窘境？你是否缺乏紧迫感？你是否感觉在考研的路上孤军奋战？“这周学什么？”是专为考研人设计的，大家将自己的计划写下，互相监督学习，以“制定计划——完成计划”的正反馈提高个人执行力的网站。基于Web的数据可视化，让任何人能随时随地查看、更新自己的学习进度，也能看到你的竞争对手现在完成了多少任务，<mark>通过互相监督提高计划的执行力</mark>——你不是一个人在战斗！
+                <p>“这周学什么？”是专为考研人设计的，大家将自己的计划写下，互相监督学习，以“制定计划——完成计划”的正反馈提高个人执行力的网站。基于Web的数据可视化，让任何人能随时随地查看、更新自己的学习进度，也能看到你的竞争对手现在完成了多少任务，<mark>通过互相监督提高计划的执行力和时间紧迫感。</mark>
                 </p>
-                <h3>架构</h3>
+                <h3>用法</h3>
+		<ol><li>
+ 周一规划好一周的学习任务，在网页上提交；
+	
+			</li>
+	<li>每天早上从周计划表中选取任务，在卡片或手机备忘录中写下自己的日计划；</li>
+	<li>完成某项或某几项后在网页上打钩，并点击自己的名字提交数据；</li>
+<li>周日总结自己这周学习情况：完成了多少、学习效率，也可以看看大家的任务完成情况。</li>
+</ol>
+		<h3>架构</h3>
                 <ul>
                     <li>前端：jQuery+bootstrap+Html5</li>
                     <li>中间件：body-parser</li>
-                    <li>后端：express，从服务器端通过art-template渲染</li>
+                    <li>后端：express</li>
+			<li>模板引擎：art-template</li>
                     <li>数据库：mongodb(mongoose)</li>
-                    <li>部署：使用forever守护Node.js应用进程，使用--fork命令创建数据库子进程</li>
-                    <li>虚拟机：使用华为弹性云服务器ECS，服务器到期倒计时：<span id="clock"></span>
+                    
+                    <li>云：部署在华为弹性云服务器ECS，服务器到期倒计时：<span id="clock"></span>
                     </li>
                 </ul>
                 <h3>开发日志</h3>
                 <ul>
                     <li>2018-5-12 V1.0：任务表提交、首页展示任务表</li>
                     <li>2018-5-18 V2.0：进度条随勾选框更新、保存进度功能、新增说明页面</li>
+		    <li>2018-5-24 V2.1：新增首页表格按进度条排名功能，现在首页上表格从上往下是按照进度排名的，而不是提交的先后次序</li>
                     <li>目前大家提过的需求:<ul>
-			<li>实现身份验证功能，让每个人只能自己保存自己的进度（可以做但是增加了网站繁琐性，每次都得登录账户并不方便）</li>
+			<li>实现身份验证功能，让每个人只能自己保存自己的进度（可以做但是增加了网站繁琐性，每次都得登录账户并不方便）（已经有两位同学反馈了，再有一位同学提就做）</li>
 			<li>每门学科的任务数可以设置得更多，不仅仅是三条（这个得修改后台程序的逻辑了）</li>
-			<li>实现进度条排名功能，完成得快的多的排在最前，并且每周对数据进行分析，分析大家的学习情况（这个很好，我会优先来做）</li>
 			<li>……</li>
-			<li>小伙伴们快来找我提需求啊，我会视具体情况改进。这是为大家设计的网页，大家一起学习，互相鼓励，共同进步~~</li>
 			</ul>
 		</li>
+ <li>小伙伴们快来找我提需求啊，我会视具体情况改进~</li>
+
                 </ul>
-                <h3><a href="https://github.com/guhang987/418pages" target="_blank">查看源代码</a></h3>
+                <h3><a href="https://github.com/guhang987/418pages" target="_blank">点击查看源代码</a></h3>
             </div>
             <br>
 </div>
@@ -59,15 +69,18 @@
                 <div class="panel-heading">
 
 
-                    <h2>关于作者  <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h2>
+                    <h2>关于开发者  <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h2>
                 </div>
                 <div class="panel-body">
                     <blockquote>
-                        <p>少说话，多做事。</p>
+                        <p>我无限热爱着新的一日</p>
+			<p>今天的太阳 今天的马 今天的花楸树</p>
+			<p>使我健康 富足 拥有一生</p>
+			<footer>《幸福一日致秋天的花楸树》，海子</footer>
                     </blockquote>
-                    <p><strong>古航</strong>，毕业于西北工业大学，<a href="https://blog.csdn.net/Protocols7"
-                            target="_blank">菜鸟程序员</a>，对Web前端技术、自然语言处理感兴趣。</p>
-                   <p>联系我：心专注15班H6 &nbsp; 微信号：15929970017</p>
+                    <p><strong>古航</strong>，<a href="https://blog.csdn.net/Protocols7"
+                            target="_blank">喜欢写代码。</a></p>
+                   <p>联系我：15班H6 &nbsp;</p>
                 </div>
             </div>
 </body>
@@ -78,7 +91,7 @@
             h = today.getHours(),
             m = today.getMinutes(),
             s = today.getSeconds();
-        var stopTime = new Date("May 24 2019 00:00:00"),//结束时间
+        var stopTime = new Date("May 25 2019 00:00:00"),//结束时间
             stopH = stopTime.getHours(),
             stopM = stopTime.getMinutes(),
             stopS = stopTime.getSeconds();

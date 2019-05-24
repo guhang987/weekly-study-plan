@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>这周学什么？——拯救你的执行力</title>
+    <title>这周学什么？</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -24,8 +24,8 @@
 <div class="jumbotron">
 <div class="container">
   <h1><strong>预则立，不预则废</strong></h1>
-  <p>这是一个专为考研人设计的网页。以周为单位，你可以在这里看看大家的学习计划完成情况，也可以写下你的计划，但完成后要记得来这里打钩，<strong>并且轻触你的名字来保存进度</strong>。快来享受任务完成的快感吧！</p>
-  <p><a class="btn btn-primary btn-lg" href="/new" role="button">现在就写计划！</a>&nbsp; <a class="btn btn-info btn-lg" href="/about" role="button">关于本站</a>  </p>
+  <p>这是一个专为考研人设计的网页。以周为单位，你可以在这里看看大家的学习计划完成情况，也可以写下你的计划，但完成后要记得来这里打钩，<strong>并且轻触你的名字来保存进度</strong>。注意：请在周日18:00前提交学习进度。</p>
+  <p><a class="btn btn-primary btn-lg" href="/new" role="button">现在就写计划！</a>&nbsp; <a class="btn btn-info btn-lg" href="/about" role="button">使用帮助</a>  </p>
 	<p id="clock"></p>
 	<p id="clock2"></p>
 </div></div>
@@ -76,7 +76,7 @@
     <div>
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
 
-            <h3 align="center">5.13-5.19周计划 [MVP:<strong>刘天阳</strong>]<br> <small>（点击查看详情）</small> </h3>
+            <h3 align="center">5.13-5.19周计划 [最佳:<strong>刘天阳</strong>]<br> <small>（点击查看详情）</small> </h3>
 
         </a>
 
@@ -486,9 +486,12 @@ setTimeout(clock, 500);
 
         var name = $(tb.parentNode.parentNode).find("a")[0]
         var n = $(name).html().toString()
-       var pro = $(tb.parentNode.parentNode).find("#pro")[0] 
+       var pro = $(tb.parentNode.parentNode).find("#pro")[0]
+	 var s = $(tb.parentNode.parentNode).find("#pro").html().toString()
+	s=s.substring(0,s.length-1)
+	
         n=n.substring(0,n.length-5)
-        $.post("/",{name:n,pro:pro.outerHTML,data:$(str).html().toString()},function(result){
+        $.post("/",{name:n,pro:pro.outerHTML,pronum:s,data:$(str).html().toString()},function(result){
              
         });
 	alert("保存成功~")

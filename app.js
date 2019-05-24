@@ -38,7 +38,10 @@ var studentSchema = new Schema({
 	pro:{
         type: String,
         required:true
-    }
+    },
+	pronum:{
+	type:Number
+	}
 });
 
 // 3.将文档结构发布为模型，
@@ -47,12 +50,12 @@ var Student = mongoose.model('Student',studentSchema)
 
 app.get('/',function(req,res){
    
-    Student.find(function(err,ret){
+    Student.find({}).sort({"pronum":-1}).exec(function(err,ret){
         if(err){
             return console.log(err)
         }else
         {
-		console.log(ret)
+
             res.render('index.html',{
                 items:ret
                 
@@ -75,12 +78,13 @@ app.post('/',function(req,res){
     },{
         name:req.body.name.replace(/\s*/g,""),
         html:req.body.data.toString(),
-	pro:req.body.pro
+	pro:req.body.pro,
+	pronum:parseInt(req.body.pronum)
     },function(err,ret){
         if(err){
             return console.log(err)
         }else{
-        console.log("修改成功")
+	
         }
     })
 })
@@ -132,6 +136,7 @@ app.post('/new',function(req,res){
 }
     var admin = new Student({
         name:req.body.name,
+	pronum:0,
         html:html,//html是要渲染的html表格字段 
    	pro:"<div class=\"progress-bar progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"0\"aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"pro\" style=\"min-width: 2em;\">0%</div>" 
 	 })
