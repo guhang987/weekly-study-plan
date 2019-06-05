@@ -21,7 +21,7 @@ app.engine('html',require('express-art-template'))
 var mongoose = require('mongoose');
 
 //1.连接你的数据库
-mongoose.connect('mongodb://localhost:27017/week2', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/week4', {useNewUrlParser: true});
 
 //2.设计文档结构
 var Schema = mongoose.Schema;
@@ -144,7 +144,7 @@ app.post('/new',function(req,res){
         if(err){
             console.log(err)
         }else{
-            console.log('保存成功',ret)
+            //console.log('保存成功',ret)
         }
     })
     res.redirect('/')
