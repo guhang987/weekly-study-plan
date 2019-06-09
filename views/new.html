@@ -15,8 +15,6 @@
 
 <body>
 	<div class="container">
-    <h1 align="center">6.3-6.9学习计划</h1>
-	<p align="center">不学的科目，请点击“移除一项计划”来清空</p>
 
     <form action="/new" method="POST">
  
@@ -24,7 +22,7 @@
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
             <div class="col-sm-10">
-                <input required="required" type="text" class="form-control" name="name" placeholder="请填写大名~">
+                <input required="required" type="text" class="form-control" name="name" placeholder="请填写姓名~">
 
             </div>
 
@@ -90,7 +88,7 @@
     var rowCount1 = 1;//(资源)行数默认1行 
     //添加资源输入框项 
     function addCenterIpGrp1(obj) {
-	if(rowCount1<=2){
+	if(rowCount1<=4){
         rowCount1++
         html = "<input required='required' type='text' class='form-control' id='zz" + rowCount1 + "' name='zz" + rowCount1 + "' placeholder='请填写任务" + rowCount1 + "'> "
         obj.insertAdjacentHTML('beforebegin', html)
@@ -105,7 +103,7 @@
     var rowCount2 = 1;//(资源)行数默认1行 
     //添加资源输入框项 
     function addCenterIpGrp2(obj) {
-	if(rowCount2<=2){       
+	if(rowCount2<=4){       
  rowCount2++
         html = "<input required='required' type='text' class='form-control' id='yy" + rowCount2 + "' name='yy" + rowCount2 + "' placeholder='请填写任务" + rowCount2 + "'> "
         obj.insertAdjacentHTML('beforebegin', html)
@@ -120,7 +118,7 @@
     var rowCount3 = 1;//(资源)行数默认1行 
     //添加资源输入框项 
     function addCenterIpGrp3(obj) {
-if(rowCount3<=2){      
+if(rowCount3<=4){      
   rowCount3++
         html = "<input required='required' type='text' class='form-control' id='sx" + rowCount3 + "' name='sx" + rowCount3 + "' placeholder='请填写任务" + rowCount3 + "'> "
         obj.insertAdjacentHTML('beforebegin', html)
@@ -135,7 +133,7 @@ if(rowCount3<=2){
     var rowCount4 = 1;//(资源)行数默认1行 
     //添加资源输入框项 
     function addCenterIpGrp4(obj) {
-if(rowCount4<=2){      
+if(rowCount4<=4){      
   rowCount4++
         html = "<input required='required' type='text' class='form-control' id ='zyk" + rowCount4 + "' name='zyk" + rowCount4 + "' placeholder='请填写任务" + rowCount4 + "'> "
         obj.insertAdjacentHTML('beforebegin', html)

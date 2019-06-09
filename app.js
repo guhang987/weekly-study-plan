@@ -21,7 +21,7 @@ app.engine('html',require('express-art-template'))
 var mongoose = require('mongoose');
 
 //1.连接你的数据库
-mongoose.connect('mongodb://localhost:27017/week4', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/week5', {useNewUrlParser: true});
 
 //2.设计文档结构
 var Schema = mongoose.Schema;
@@ -98,7 +98,13 @@ app.get('/new',function(req,res){
 })
 app.post('/new',function(req,res){
     var html=""
-    if(req.body.zz3){
+	 if(req.body.zz5){
+        html += " <td><p>1、"+req.body.zz1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zz2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.zz3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>4、"+req.body.zz4+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>5、"+req.body.zz5+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
+    }
+ else if(req.body.zz4){
+        html += " <td><p>1、"+req.body.zz1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zz2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.zz3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>4、"+req.body.zz4+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
+    }
+   else if(req.body.zz3){
         html += " <td><p>1、"+req.body.zz1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zz2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.zz3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.zz2){
         html +=" <td><p>1、"+req.body.zz1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zz2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
@@ -107,7 +113,15 @@ app.post('/new',function(req,res){
     }else{
 	html += "<td> </td>"
 }
-    if(req.body.yy3){
+
+
+ if(req.body.yy5){
+        html += " <td><p>1、"+req.body.yy1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.yy2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.yy3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>4、"+req.body.yy4+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>5、"+req.body.yy5+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
+    }
+ else if(req.body.yy4){
+        html += " <td><p>1、"+req.body.yy1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.yy2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.yy3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>4、"+req.body.yy4+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
+    }
+    else if(req.body.yy3){
         html += " <td><p>1、"+req.body.yy1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.yy2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.yy3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.yy2){
         html +=" <td><p>1、"+req.body.yy1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.yy2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
@@ -116,7 +130,13 @@ app.post('/new',function(req,res){
     }else{
 	html += "<td> </td>"
 }
-    if(req.body.sx3){
+	 if(req.body.sx5){
+        html += " <td><p>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.sx2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.sx3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>4、"+req.body.sx4+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>5、"+req.body.sx5+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
+    }
+ else if(req.body.sx4){
+        html += " <td><p>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.sx2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.sx3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>4、"+req.body.sx4+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
+    }
+    else if(req.body.sx3){
         html += " <td><p>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.sx2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.sx3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.sx2){
         html +=" <td><p>1、"+req.body.sx1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.sx2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
@@ -125,7 +145,14 @@ app.post('/new',function(req,res){
     }else{
 	html += "<td> </td>"
 }
-    if(req.body.zyk3){
+
+ if(req.body.zyk5){
+        html += " <td><p>1、"+req.body.zyk1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zyk2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.zyk3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>4、"+req.body.zyk4+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>5、"+req.body.zyk5+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
+    }
+ else if(req.body.zyk4){
+        html += " <td><p>1、"+req.body.zyk1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zyk2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.zyk3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>4、"+req.body.zyk4+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
+    }
+    else if(req.body.zyk3){
         html += " <td><p>1、"+req.body.zyk1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zyk2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>3、"+req.body.zyk3+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
     }else if(req.body.zyk2){
         html +=" <td><p>1、"+req.body.zyk1+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p><p>2、"+req.body.zyk2+"&nbsp;<input onclick=\"checkboxOnclick(this)\"  type=\"checkbox\" ></p></td>"
