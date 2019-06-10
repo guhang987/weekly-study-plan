@@ -41,8 +41,20 @@ var studentSchema = new Schema({
     },
 	pronum:{
 	type:Number
+	},
+	sub1:{
+	type:String
+	},
+	sub2:{
+	type:String
+	},
+	sub3:{
+	type:String
+	},
+	sub4:{
+	type:String
 	}
-});
+});//sub1-4科目名称
 
 // 3.将文档结构发布为模型，
 // 第一个参数传入大写名词单数字符串表示数据库名称，系统改成users；第二个参数传入架构
@@ -161,12 +173,31 @@ app.post('/new',function(req,res){
     }else{
 	html += "<td> </td>"
 }
+
+	if(req.body.name=="张可"){
+ var admin = new Student({
+        name:req.body.name,
+        sub1:"英语",
+        sub2:"数学",
+        sub3:"逻辑写作",
+        pronum:0,
+        html:html,//html是要渲染的html表格字段
+        pro:"<div class=\"progress-bar progresss-bar-danger rogress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"0\"aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"pro\" style=\"min-width: 2em;\">0%</div>"
+         })
+		
+	}else{
+
     var admin = new Student({
         name:req.body.name,
+	sub1:"政治",
+	sub2:"英语",
+	sub3:"数学",
+	sub4:"专业课",
 	pronum:0,
         html:html,//html是要渲染的html表格字段 
    	pro:"<div class=\"progress-bar progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"0\"aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"pro\" style=\"min-width: 2em;\">0%</div>" 
 	 })
+}
     admin.save(function(err,ret){
         if(err){
             console.log(err)

@@ -24,9 +24,12 @@
 <div class="jumbotron">
 <div class="container">
   <h1><strong>心中有信仰，脚下有力量。</strong></h1>
+	<p id="saysome">说点什么吧~~</pdd>
+	
+
+
+	
 <p><a class="btn btn-primary btn-lg" href="/new" role="button">现在就写计划！</a>&nbsp;<!-- <a class="btn btn-info btn-lg" href="/about" role="button">使用帮助</a> --> </p>
-	<p id="clock"></p>
-	<p id="clock2"></p>
 </div></div>
         <a data-toggle="collapse" data-parent="#accordion" href="#collapsOne">
 
@@ -46,10 +49,10 @@
                 <h4 align="center"> <a  href="javascript:;" onclick="tbOnclick(this)" >  {{ $value.name }}的学习计划</a></h4>
                 <thead>
                     <tr>
-                        <th>政治</th>
-                        <th>英语</th>
-                        <th>数学</th>
-                        <th>专业课</th>
+                        <th>{{ $value.sub1 }}</th>
+                        <th>{{ $value.sub2 }}</th>
+                        <th>{{ $value.sub3 }}</th>
+                        <th>{{ $value.sub4 }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1111,7 +1114,10 @@ setTimeout(clock, 500);
         var perratio = Number(ratio).toFixed(0)
 	if ( checkbox.checked == true){
 	$(parent).find("#pro").text(perratio+"%")
-	 $(parent).find("#pro").attr("style", "width:" + ratio + "%;")  	        
+	 $(parent).find("#pro").attr("style", "width:" + ratio + "%;")  	       
+
+	
+
         //Action for checked
         checkbox.parentNode.style.textDecoration="line-through"
         $(checkbox).attr("checked", "1");
@@ -1122,7 +1128,26 @@ setTimeout(clock, 500);
         checkbox.parentNode.style.textDecoration="none"
 	      $(checkbox).removeAttr("checked")      
         }
-        
+        if(perratio == 100){
+		 $(parent).find("#pro").attr("class","progress-bar progress-bar-success progress-bar-striped active")
+	
+	}else if(perratio >= 75){
+         $(parent).find("#pro").attr("class","progress-bar  progress-bar-striped active")
+
+        }
+else if(perratio >= 50){
+	 $(parent).find("#pro").attr("class","progress-bar progress-bar-info progress-bar-striped active")
+
+	}else if(perratio >= 25){
+	 $(parent).find("#pro").attr("class","progress-bar progress-bar-warning progress-bar-striped active")
+
+	}else if(perratio >= 0){
+	 $(parent).find("#pro").attr("class","progress-bar progress-bar-danger progress-bar-striped active")
+	if(perratio == 0){
+		 $(parent).find("#pro").attr("style","min-width: 2em;").html("0%")	
+	}
+	}
+	
         }
  
     </script>
